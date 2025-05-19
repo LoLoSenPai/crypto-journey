@@ -154,7 +154,7 @@
 
 body {
   /* background: var(--background); */
-  background-image: url('/images/bg1.png');
+  /* background-image: url('/images/bg1.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

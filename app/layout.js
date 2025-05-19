@@ -1,6 +1,7 @@
 import { Nunito, PT_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import BackgroundWrapper from "@/components/BackgroundWrapper";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -29,11 +30,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${nunito.variable} ${ptSerif.variable} ${jetBrains.variable} antialiased max-w-7xl mx-auto`}
-      >
-        <Navbar />
-        {children}
+      <body className={`${nunito.variable} ${ptSerif.variable} ${jetBrains.variable} antialiased`}>
+        <BackgroundWrapper>
+          <Navbar />
+          <main className="max-w-7xl mx-auto">{children}</main>
+        </BackgroundWrapper>
       </body>
     </html>
   );

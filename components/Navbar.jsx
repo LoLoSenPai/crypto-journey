@@ -1,51 +1,52 @@
 import React from "react";
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="flex mx-auto items-center justify-between p-8 m-8 h-16 text-primary-foreground">
+    <nav className="flex mx-auto max-w-7xl items-center justify-between p-8 m-8 h-16 text-primary-foreground">
       <div className="flex items-center">
-        <a href="/"><img src="/logo.png" alt="Logo" className="h-32" /></a>
+        <Link href="/"><img src="/logo.png" alt="Logo" className="h-32" /></Link>
       </div>
       <ul className="flex gap-8 list-none m-0 p-0">
         <li>
-          <a
+          <Link
             href="/blockchain-basics"
             className="font-medium text-base px-3 py-1 rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground"
           >
             Blockchain Basics
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/get-started"
             className="font-medium text-base px-3 py-1 rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground"
           >
             Get Started
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/security"
             className="font-medium text-base px-3 py-1 rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground"
           >
             Security
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/degens"
             className="font-medium text-base px-3 py-1 rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground"
           >
             Degens
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/tricks-and-tips"
             className="font-medium text-base px-3 py-1 rounded-md transition-colors hover:bg-secondary hover:text-secondary-foreground"
           >
             Tricks & Tips
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
