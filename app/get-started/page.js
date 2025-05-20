@@ -9,8 +9,7 @@ import Image from 'next/image';
 const steps = [
     {
         id: 1,
-        title: 'Create a Phantom Wallet',
-        description: 'Phantom is a friendly crypto wallet for Solana blockchain. Perfect for beginners!',
+        title: 'Phantom Wallet',
         icon: '/icons/phantom.png',
         content: `
             1. Visit phantom.app
@@ -22,8 +21,7 @@ const steps = [
     },
     {
         id: 2,
-        title: 'Set Up MetaMask',
-        description: 'MetaMask is your gateway to Ethereum and thousands of dApps.',
+        title: 'MetaMask',
         icon: '/icons/metamask.png',
         content: `
             1. Go to metamask.io
@@ -35,8 +33,7 @@ const steps = [
     },
     {
         id: 3,
-        title: 'Buy Crypto on Coinbase',
-        description: 'Coinbase is a secure platform that makes it easy to buy, sell, and store cryptocurrency.',
+        title: 'Coinbase',
         icon: '/icons/coinbase.png',
         content: `
             1. Create a Coinbase account
@@ -48,8 +45,7 @@ const steps = [
     },
     {
         id: 4,
-        title: 'Explore Binance',
-        description: 'Binance offers a wide range of cryptocurrencies and advanced trading features.',
+        title: 'Binance',
         icon: '/icons/binance.png',
         content: `
             1. Sign up on Binance
@@ -94,7 +90,7 @@ export default function GetStartedPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="relative overflow-hidden flex items-center gap-4 bg-card rounded-xl px-4 py-3 shadow-sm border-2 border-border hover:shadow-md transition-all cursor-pointer"
+                        className="relative overflow-hidden flex items-center gap-8 bg-card rounded-xl px-6 py-4 shadow-sm border-2 border-border hover:shadow-md transition-all cursor-pointer group"
                         onClick={() => {
                             setCurrentStep(index);
                             setIsDialogOpen(true);
@@ -107,20 +103,17 @@ export default function GetStartedPage() {
                         <Image
                             src={step.icon}
                             alt={step.title}
-                            width={80}
-                            height={80}
-                            className="rounded-md"
+                            width={100}
+                            height={100}
+                            className="rounded-md transition-transform duration-300 group-hover:scale-110"
                         />
 
-                        <div>
-                            <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
-                            <p className="text-secondary-foreground">{step.description}</p>
-                        </div>
+                        <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>
 
                         <img
                             src="/images/card-bg1.png"
                             alt="Background"
-                            className="absolute -bottom-14 left-0 w-full scale-107 object-bottom object-cover z-0 pointer-events-none opacity-70"
+                            className="absolute -bottom-14 left-0 w-full scale-107 object-bottom object-cover z-0 pointer-events-none opacity-50"
                         />
                     </motion.li>
                 ))}
@@ -130,9 +123,6 @@ export default function GetStartedPage() {
                 <DialogContent className="sm:max-w-xl">
                     <DialogHeader>
                         <DialogTitle className="text-2xl mb-2">{steps[currentStep]?.title}</DialogTitle>
-                        <DialogDescription className="text-lg">
-                            {steps[currentStep]?.description}
-                        </DialogDescription>
                     </DialogHeader>
 
                     <div className="mt-4">
@@ -140,8 +130,8 @@ export default function GetStartedPage() {
                             <Image
                                 src={steps[currentStep]?.icon}
                                 alt={steps[currentStep]?.title}
-                                width={100}
-                                height={100}
+                                width={120}
+                                height={120}
                                 className="rounded-xl"
                             />
                         </div>
