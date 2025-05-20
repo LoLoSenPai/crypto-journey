@@ -77,8 +77,14 @@ export default function GetStartedPage() {
     };
 
     return (
-        <main className="max-w-2xl mx-auto mt-12 px-4">
-            <h1 className="text-5xl font-bold text-center text-primary mb-2">Wallet Setup</h1>
+        <main className="max-w-2xl mx-auto px-4 py-12">
+            <motion.h1
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-6xl text-center font-bold text-primary mb-8"
+            >
+                Wallet Setup
+            </motion.h1>
             <p className="text-lg text-center text-secondary mb-8">
                 Set up your first cryptocurrency wallet and purchase your first crypto.
             </p>
@@ -105,7 +111,7 @@ export default function GetStartedPage() {
                             alt={step.title}
                             width={100}
                             height={100}
-                            className="rounded-md transition-transform duration-300 group-hover:scale-110"
+                            className="rounded-md transition-transform duration-300 z-1 group-hover:scale-110"
                         />
 
                         <h3 className="text-2xl font-bold text-foreground">{step.title}</h3>

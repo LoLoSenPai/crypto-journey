@@ -22,14 +22,14 @@ const securityTips = [
         id: 3,
         title: "Enable 2FA",
         description: "Always use two-factor authentication for exchange accounts and wallets when available.",
-        icon: "/images/security.png",
+        icon: "/images/security2.png",
         color: "bg-[#45B7D1]",
     },
     {
         id: 4,
         title: "Verify Transactions",
         description: "Double-check addresses and amounts before sending. Transactions cannot be reversed.",
-        icon: "/images/security2.png",
+        icon: "/images/security.png",
         color: "bg-[#96CEB4]",
     }
 ];
@@ -85,12 +85,12 @@ export default function SecurityPage() {
                             <h2 className="text-2xl font-bold text-foreground mb-3">
                                 {tip.title}
                             </h2>
-                            <p className="text-secondary text-lg">
+                            <p className="text-foreground text-lg">
                                 {tip.description}
                             </p>
                         </div>
                         
-                        <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                        <div className="absolute -bottom-5 -right-6 w-60 h-60 opacity-10 group-hover:opacity-70 transition-opacity duration-300">
                             <Image
                                 src={tip.icon}
                                 alt=""
@@ -119,7 +119,7 @@ export default function SecurityPage() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.7 + index * 0.1 }}
-                                className="flex items-center gap-3 text-lg text-secondary"
+                                className="flex items-center gap-3 text-lg text-foreground"
                             >
                                 <span className="w-2 h-2 bg-destructive rounded-full" />
                                 {scam}
@@ -129,9 +129,9 @@ export default function SecurityPage() {
                 </div>
 
                 <img
-                    src="/images/card-bg2.png"
+                    src="/images/tricksandtips.png"
                     alt="Background pattern"
-                    className="absolute -bottom-10 right-0 w-64 opacity-20"
+                    className="absolute -bottom-7 right-3 w-64 opacity-70"
                 />
             </motion.div>
 

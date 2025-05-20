@@ -48,7 +48,7 @@ export default function BlockchainBasicsPage() {
                             <h2 className="text-2xl font-bold text-foreground mb-4">
                                 {section.title}
                             </h2>
-                            <p className="text-secondary text-lg mb-6">
+                            <p className="text-foreground text-lg mb-6">
                                 {section.description}
                             </p>
                         </div>
@@ -77,10 +77,10 @@ export default function BlockchainBasicsPage() {
                     <h2 className="text-3xl font-bold text-foreground mb-6">
                         Beyond Cryptocurrency
                     </h2>
-                    <p className="text-lg text-secondary mb-4">
+                    <p className="text-lg text-foreground mb-4">
                         While blockchain is famous for powering cryptocurrencies, its potential reaches far beyond:
                     </p>
-                    <ul className="grid md:grid-cols-2 gap-6 text-lg text-secondary">
+                    <ul className="grid md:grid-cols-2 gap-6 text-lg text-foreground">
                         <li className="flex items-center gap-2">
                             <span className="w-2 h-2 bg-primary rounded-full" />
                             Supply Chain Tracking

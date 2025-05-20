@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="flex mx-auto max-w-7xl items-center justify-between p-8 m-8 h-16 text-primary-foreground">
       <div className="flex items-center">
-        <Link href="/"><img src="/logo.png" alt="Logo" className="h-32" /></Link>
+        <Link href="/"><img src="/logo.png" alt="Logo" className="h-32 hover:rotate-360 transition-transform duration-300" /></Link>
       </div>
       <ul className="flex gap-8 list-none m-0 p-0">
         <li>
