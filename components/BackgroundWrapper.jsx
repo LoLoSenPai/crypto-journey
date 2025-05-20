@@ -8,7 +8,7 @@ export default function BackgroundWrapper({ children }) {
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/bg1.png"
+        src="/images/bg5.png"
         alt="Background"
         fill
         priority

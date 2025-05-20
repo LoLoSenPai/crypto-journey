@@ -27,7 +27,7 @@ const features = [
       <img
         src="/images/blockchain-basics.png"
         alt=""
-        className="absolute left-5 bottom-3 w-70 pointer-events-none select-none"
+        className="absolute left-5 bottom-5 w-70 pointer-events-none select-none"
       />
     ),
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
